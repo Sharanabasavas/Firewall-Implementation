@@ -12,7 +12,32 @@ This project implements a basic firewall application that filters incoming and o
 - **Python**: High-level management of firewall rules.
 - **C**: For low-level packet inspection and filtering.
 - **iptables/nftables**: Linux networking tools for firewall configuration.
-- **libpcap**: Library for network packet capture.
+- **libpcap**: Library
+### Running the Firewall
+1. **Add a firewall rule**:
+    ```
+    python src/firewall.py
+    ```
+
+2. **Example commands**:
+    - Add a rule to accept SSH traffic:
+      ```bash
+      firewall.add_rule("-A INPUT -p tcp --dport 22 -j ACCEPT")
+      ```
+
+    - List all current rules:
+      ```bash
+      firewall.list_rules()
+      ```
+
+    - Remove a rule:
+      ```bash
+      firewall.remove_rule("-D INPUT -p tcp --dport 22 -j ACCEPT")
+      ```
+
+### Running Unit Tests
+To run unit tests for rule management:
+ for network packet capture.
 
 ## Setup Instructions
 
@@ -23,3 +48,6 @@ This project implements a basic firewall application that filters incoming and o
 - `libpcap` installed.
 
 ### Install Python Dependencies
+
+### Compile C Code
+To compile the C packet filter:
