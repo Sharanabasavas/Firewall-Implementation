@@ -51,3 +51,7 @@ To run unit tests for rule management:
 
 ### Compile C Code
 To compile the C packet filter:
+
+## License
+This project is licensed under the MIT License.
+
